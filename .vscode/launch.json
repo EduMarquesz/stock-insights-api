@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python (sls invoke)",
+            "type": "python",
+            "request": "launch",
+            "program": "sls",
+            "args": [
+                "invoke",
+                "local",
+                "-f",
+                "nomeDaFuncao"
+            ],
+            "env": {
+                "AWS_PROFILE": "seu profile" // Substitua pelo seu profile AWS
+            },
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python (sls offline)",
+            "type": "python",
+            "request": "attach",
+            "connect": {
+                "host": "localhost",
+                "port": 5678
+            },
+            "justMyCode": false
+        }
+    ]
+}

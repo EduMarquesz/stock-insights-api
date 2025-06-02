@@ -1,0 +1,41 @@
+service: My-Tests
+
+frameworkVersion: '3'
+
+provider:
+  name: aws 
+  runtime: python3.11
+  stage: dev
+  region: us-east-1
+  environment:
+    STAGE: ${self:provider.stage}
+    TOKEN_BRAPI: ${self:custom.token_brapi.${self:provider.stage}}
+
+custom:
+  token_brapi:
+    dev: 91yTrWScxfMvvh8RmxAHpR
+    qa: your_qa_token_here
+    prod: your_prod_token_here
+
+
+package:
+  patterns:
+    - "!node_modules/**"
+    - node_modules/node-fetch/**
+    - "!package.json"
+    - "!package-lock.json"
+    - "!env/**"
+    - "!__pycache__/**"
+
+functions:
+  fetch_stock_data:
+    handler: functions/stock_analysis.handler
+    timeout: 30
+    events:
+      - http:
+          path: stock-analysis
+          method: get
+          cors: true
+
+plugins:
+  - serverless-offline

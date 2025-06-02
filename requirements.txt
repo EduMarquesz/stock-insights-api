@@ -1,0 +1,4 @@
+requests==2.32.3
+yfinance==0.2.61
+pandas==2.2.3
+debugpy==1.8.14  # para usar o debug
