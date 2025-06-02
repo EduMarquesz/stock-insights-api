@@ -1,4 +1,4 @@
-# Projeto DebugVsCode
+# Projeto stock insights
 
 API em Python com AWS Lambda que retorna o histórico de preços e dados básicos de ações da B3, utilizando `yfinance` e a API pública do Brapi.
 
