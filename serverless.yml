@@ -13,7 +13,7 @@ provider:
 
 custom:
   token_brapi:
-    dev: 91yTrWScxfMvvh8RmxAHpR
+    dev: your_dev_token_here
     qa: your_qa_token_here
     prod: your_prod_token_here
 
