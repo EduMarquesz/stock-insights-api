@@ -39,8 +39,8 @@ A função `fetch_stock_data` exposta via API retorna:
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/DebugVsCode.git
-cd DebugVsCode
+git clone https://github.com/seu-usuario/stock-insights-api.git
+cd stock-insights-api
 ```
 
 2. Instale as dependências:
