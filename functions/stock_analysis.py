@@ -2,16 +2,9 @@ from json import dumps
 from logging import error
 from os import environ
 
-# import debugpy  # Não esqueça de tirar pós testes
 import pandas as pd
 import yfinance as yf
 from requests import get
-
-# Não esqueça de tirar pós testes
-# debugpy.listen(("0.0.0.0", 5678))
-# print("⏳ Aguardando debugger...")
-# debugpy.wait_for_client()
-# ^^^ Não esqueça de tirar pós testes
 
 
 def fetch_price_history(ticker: str, period: str = "5y"):
@@ -24,7 +17,7 @@ def fetch_price_history(ticker: str, period: str = "5y"):
 
 
 def fetch_fundamentals(ticker: str) -> dict:
-    param = {"token": environ.get("TOKEN_BRAPI")}
+    param = {"token": "b934c372-37f9-4e88-b9bd-bd890ae3132e"}
     response = get(f"https://brapi.dev/api/quote/{ticker}?range=1d", params=param)
 
     data = {
