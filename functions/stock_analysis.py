@@ -2,15 +2,15 @@ from json import dumps
 from logging import error
 from os import environ
 
-import debugpy  # Não esqueça de tirar pós testes
+# import debugpy  # Não esqueça de tirar pós testes
 import pandas as pd
 import yfinance as yf
 from requests import get
 
 # Não esqueça de tirar pós testes
-debugpy.listen(("0.0.0.0", 5678))
-print("⏳ Aguardando debugger...")
-debugpy.wait_for_client()
+# debugpy.listen(("0.0.0.0", 5678))
+# print("⏳ Aguardando debugger...")
+# debugpy.wait_for_client()
 # ^^^ Não esqueça de tirar pós testes
 
 
